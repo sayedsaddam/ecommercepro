@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\AboutComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
@@ -20,6 +21,11 @@ use App\Http\Livewire\Admin\AdminEditHomeSlideComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
+use App\Http\Livewire\BlogComponent;
+use App\Http\Livewire\BlogDetailComponent;
+use App\Http\Livewire\ContactComponent;
+use App\Http\Livewire\PrivacyPolicyComponent;
+use App\Http\Livewire\TermsConditionsComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +70,12 @@ Route::middleware(['auth', 'authadmin'])->group(function(){
 });
 
 Route::get('/', HomeComponent::class)->name('home.index');
+Route::get('/about', AboutComponent::class)->name('about');
+Route::get('/blog', BlogComponent::class)->name('blog');
+Route::get('/blog-detail', BlogDetailComponent::class)->name('blog.detail');
+Route::get('/contact', ContactComponent::class)->name('contact');
+Route::get('/privacy-policy', PrivacyPolicyComponent::class)->name('privacy-policy');
+Route::get('/terms-conditions', TermsConditionsComponent::class)->name('terms-conditions');
 Route::get('/shop', ShopComponent::class)->name('shop');
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 Route::get('/cart', CartComponent::class)->name('shop.cart');

@@ -281,7 +281,7 @@
                                 <nav>
                                     <ul>
                                         <li><a class="active" href="/">Home </a></li>
-                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="{{ route('about') }}">About</a></li>
                                         <li><a href="{{ route('shop') }}">Shop</a></li>
                                         <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>
                                             <ul class="mega-menu">
@@ -340,8 +340,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="blog.html">Blog </a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{{ route('blog') }}">Blog </a></li>
+                                        <li><a href="{{ route('contact') }}">Contact</a></li>
                                         @auth
                                             <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
                                                 @if(Auth::user()->utype == 'ADM')
@@ -602,19 +602,19 @@
                         <div class="col-lg-2 col-md-3">
                             <h5 class="widget-title wow fadeIn animated">About</h5>
                             <ul class="footer-list wow fadeIn animated mb-sm-5 mb-md-0">
-                                <li><a href="#">About Us</a></li>
+                                <li><a href="{{ route('about') }}">About Us</a></li>
                                 <li><a href="#">Delivery Information</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                                <li><a href="{{ route('terms-conditions') }}">Terms &amp; Conditions</a></li>
+                                <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-2  col-md-3">
                             <h5 class="widget-title wow fadeIn animated">My Account</h5>
                             <ul class="footer-list wow fadeIn animated">
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="#">View Cart</a></li>
-                                <li><a href="#">My Wishlist</a></li>
+                                <li><a href="{{ route('login') }}">My Account</a></li>
+                                <li><a href="{{ route('shop.cart') }}">View Cart</a></li>
+                                <li><a href="{{ route('shop.wishlist') }}">My Wishlist</a></li>
                                 <li><a href="#">Track My Order</a></li>
                                 <li><a href="#">Order</a></li>
                             </ul>
